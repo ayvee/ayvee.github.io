@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Ashish Vulimiri</title>
+	<meta name="description" content="Ashish Vulimiri's personal website">
+	<meta name="author" content="Ashish Vulimiri">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!-- Fonts
+  ================================================== -->
+  <!-- <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+
+	<div class="container">
+		<div class="sixteen columns clearfix" style="margin-top: 40px">
+			<div class="twelve columns alpha clearfix">
+				<h1 class="pop-color">Ashish Vulimiri</h1>
+				Ph.D. candidate, Computer Science, UIUC<br />
+				B.Tech. (H), Computer Science and Engineering, IIT Kharagpur<br /><br />
+				<p>I'm a final year Ph.D. candidate at UIUC, where I work with Prof. <a href="http://web.engr.illinois.edu/~pbg/">Brighten Godfrey</a> on problems in networked and distributed systems.</p>
+				<!-- <div id="app-box">
+					<strong>
+					I am on the job market this year.<br />
+					<a href="cv.pdf">CV</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="research-statement.pdf">Research statement</a>
+					</strong>
+				</div> -->
+				<!-- I am a Ph.D. candidate at the Unversity of Illinois, jointly advised by Profs. <a href="http://web.engr.illinois.edu/~pbg">Brighten Godfrey</a> and <a href="http://osl.cs.illinois.edu/members/agha.html">Gul Agha</a>.-->
+			</div>
+			<div class="four columns omega">
+				<img src="images/photo-thumb.png" height="180" alt = "moi" style="float:right;" />
+			</div>
+		</div>
+
+		<!-- The "display: none" hides the navbar by default.  Will only be activated if javascript is enabled. -->
+		<div class="sixteen columns" id="navbar" style="margin-top: 40px; display: none;">
+			<ul class="tabs">
+				<li class="tab-link" id="link-pubs" data-tab="tab-pubs">Publications</li>
+				<li class="tab-link" id="link-app" data-tab="tab-cv">CV</li>
+				<li class="tab-link" id="link-contact" data-tab="tab-contact">Contact</li>
+			</ul>
+		</div>
+
+		<div class="sixteen columns noscript-sec-head">
+			CV
+		</div>
+		<div class="sixteen columns tab-content active" id="tab-cv">
+			<p style="font-size:125%;">[<a href="cv.pdf">pdf</a>]</p>
+		</div>
+
+		<div class="sixteen columns noscript-sec-head">
+			Publications
+		</div>
+		<div class="sixteen columns tab-content active" id="tab-pubs">
+			<ul>
+				<li class="paper">
+				<span class="paper_title">Global analytics in the face of bandwidth and regulatory constraints</span><br />
+				<span class="paper_authors">Ashish Vulimiri, Carlo Curino, Brighten Godfrey, Thomas Jungblut, Jitu Padhye, George Varghese</span><br />
+				<span class="paper_location">NSDI 2015</span><br />
+                [<a href="javascript:$('#abs_nsdi2015').toggle()">abstract</a>] [<a href="papers/15-nsdi.pdf">pdf</a>]
+				<div class="paper_abstract" id="abs_nsdi2015">
+					Global-scale organizations produce large volumes of data <em>across</em> geographically distributed data centers. Querying and analyzing such data as a whole introduces new research issues at the intersection of networks and databases. Today systems that compute SQL analytics over geographically distributed data operate by pulling all data to a central location.  This is problematic at large data scales due to expensive transoceanic links, and may be rendered impossible by emerging regulatory constraints. The new problem of Wide-Area Big Data (WABD) consists in orchestrating query execution across data centers to minimize bandwidth while respecting regulatory constaints.  WABD combines classical query planning with novel network-centric mechanisms designed for a wide-area setting such as pseudo-distributed execution, joint query optimization, and deltas on cached subquery results.  Our prototype, WANalytics, builds upon Hive and uses 257x less bandwidth than centralized analytics in a Microsoft production workload and up to 360x less on popular analytics benchmarks including TPC-CH and Berkeley Big Data.  WANalytics supports all SQL operators, including Joins, across global data.
+				</div>
+				</li>
+				<li class="paper">
+				<span class="paper_title">WANalytics: Geo-distributed analytics for a data-intensive world</span><br />
+				<span class="paper_authors">Ashish Vulimiri, Carlo Curino, Brighten Godfrey, Thomas Jungblut, Konstantinos Karanasos, Jitu Padhye, George Varghese</span><br />
+				<span class="paper_location">SIGMOD 2015 demo</span><br />
+				[<a href="javascript:$('#abs_sigmod2015').toggle()">abstract</a>]
+				<div class="paper_abstract" id="abs_sigmod2015">
+					Many large organizations collect massive volumes of data each day in a geographically distributed fashion, at data centers around the globe.  Despite their geographically diverse origin the data must be processed and analyzed as a whole to extract insight.  We call the problem of supporting large-scale geo-distributed analytics <em>Wide-Area Big Data (WABD)</em>.  To the best of our knowledge, WABD is currently addressed by copying all the data to a central data center where the analytics are run.  This approach consumes expensive cross-data center bandwidth and is incompatible with data sovereignty restrictions that are starting to take shape.  We instead propose WANalytics, a system that solves the WABD problem by orchestrating distributed query execution and adjusting data replication across data centers in order to minimize bandwidth usage, while respecting sovereignty requirements.  WANalytics achieves an up to 360x reduction in data transfer cost when compared to the centralized approach on both real Microsoft production workloads and standard synthetic benchmarks, including TPC-CH and Berkeley Big-Data.  In this demonstration, attendees will interact with a live geo-scale multi-data center deployment of \name, allowing them to experience the data transfer reduction our system achieves, and to explore how it dynamically adapts execution strategy in response to changes in the workload and environment.
+				</div>
+				</li>
+				<li class="paper">
+				<span class="paper_title">WANalytics: Analytics for a geo-distributed data-intensive world</span><br />
+				<span class="paper_authors">Ashish Vulimiri, Carlo Curino, Brighten Godfrey, Konstantinos Karanasos, George Varghese</span><br />
+				<span class="paper_location">CIDR 2015</span><br />
+				[<a href="javascript:$('#abs_cidr2015').toggle()">abstract</a>] [<a href="papers/15-cidr.pdf">pdf</a>]
+				<div class="paper_abstract" id="abs_cidr2015">
+					<p>Large organizations today operate data centers around the globe where massive amounts of data are produced and consumed by local users. Despite their geographically diverse origin, such data must be analyzed/mined as a whole. We call the problem of supporting rich DAGs of computation across geographically distributed data <em>Wide-Area Big-Data (WABD)</em>.  To the best of our knowledge, WABD is not supported by currently deployed systems nor sufficiently studied in literature; it is addressed today by continuously copying raw data to a central location for analysis.  We observe from production workloads that WABD is important for large organizations, and that centralized solutions incur <em>substantial cross-data center network costs</em>.  We argue that these trends will only worsen as the gap between data volumes and transoceanic bandwidth widens.  Further, emerging concerns over data sovereignty and privacy may trigger government regulations that can threaten the very viability of centralized solutions.</p>
+
+					<p>To address WABD we propose WANalytics, a system that pushes computation to edge data centers, automatically optimizing workflow execution plans and replicating data when needed.  Our Hadoop-based prototype delivers 257x reduction in WAN bandwidth on a production workload from Microsoft. We round out our evaluation by also demonstrating substantial gains for three standard benchmarks: TPC-CH, Berkeley Big Data, and BigBench.</p>
+				</div>
+				</li>
+				<li class="paper">
+				<span class="paper_title">Low latency via redundancy</span><br />
+				<span class="paper_authors">Ashish Vulimiri, P. Brighten Godfrey, Radhika Mittal, Justine Sherry, Sylvia Ratnasamy, Scott Shenker</span><br />
+				<span class="paper_location">CoNEXT 2013</span><br />
+				[<a href="javascript:$('#abs_conext2013').toggle()">abstract</a>] [<a href="papers/13-conext.pdf">pdf</a>]
+				<div class="paper_abstract" id="abs_conext2013">
+					Low latency is critical for interactive networked applications.  But while we know how to scale systems to increase capacity, reducing latency --- especially the tail of the latency distribution --- can be much more difficult.  In this paper, we argue that the use of redundancy is an effective way to convert extra capacity into reduced latency.  By initiating redundant operations across diverse resources and using the first result which completes, redundancy improves a system's latency even under exceptional conditions.  We study the tradeoff with added system utilization, characterizing the situations in which replicating all tasks reduces mean latency.  We then demonstrate empirically that replicating all operations can result in significant mean and tail latency reduction in real-world systems including DNS queries, database servers, and packet forwarding within networks.
+				</div>
+				</li>
+				<li class="paper">
+				<span class="paper_title">More is less: Reducing latency via redundancy</span><br />
+				<span class="paper_authors">Ashish Vulimiri, Oliver Michel, P. Brighten Godfrey, Scott Shenker</span><br />
+				<span class="paper_location">HotNets 2012</span><br />
+				[<a href="javascript:$('#abs_hotnets2012').toggle()">abstract</a>] [<a href="papers/12-hotnets.pdf">pdf</a>]
+				<div class="paper_abstract" id="abs_hotnets2012">
+					Low latency is critical for interactive networked applications.  But while we know how to scale systems to increase capacity, reducing latency --- especially the tail of the latency distribution --- can be much more difficult.<br /><br />
+					We argue that the use of redundancy in the context of the wide-area Internet is an effective way to convert a small amount of extra capacity into reduced latency.  By initiating redundant operations across diverse resources and using the first result which completes, redundancy improves a system's latency even under exceptional conditions. We demonstrate that redundancy can significantly reduce latency for small but critical tasks, and argue that it is an effective general-purpose strategy even on devices like cell phones where bandwidth is relatively constrained.
+				</div>
+				</li>
+				<li class="paper">
+				<span class="paper_title">How well can congestion pricing neutralize denial-of-service attacks?</span><br />
+				<span class="paper_authors">Ashish Vulimiri, Gul A. Agha, P. Brighten Godfrey, Karthik Lakshminarayanan</span><br />
+				<span class="paper_location">SIGMETRICS 2012</span><br />
+				[<a href="javascript:$('#abs_sigmetrics2012').toggle()">abstract</a>] [<a href="papers/12-sigmetrics.pdf">pdf</a>]<!-- [<a href="#proj_dos">project description</a>] -->
+				<div class="paper_abstract" id="abs_sigmetrics2012">
+					Denial of service protection mechanisms usually require classifying malicious traffic, which can be difficult. Another approach is to price scarce resources. However, while congestion pricing has been suggested as a way to combat DoS attacks, it has not been shown quantitatively how much damage a malicious player could cause to the utility of benign participants. In this paper, we quantify the protection that congestion pricing affords against DoS attacks, even for powerful attackers that can control their packets' routes. Specifically, we model the limits on the resources available to the attackers in three different ways and, in each case, quantify the maximum amount of damage they can cause as a function of their resource bounds.  In addition, we show that congestion pricing is provably superior to fair queueing in attack resilience.
+				</div>
+				</li>
+				<li class="paper">
+				<span class="paper_title">Application of secondary information for misbehavior detection in VANETs</span><br />
+				<span class="paper_authors">Ashish Vulimiri, Arobinda Gupta, Pramit Roy, Skanda N. Muthaiah and Arzad A. Kherani</span><br />
+				<span class="paper_location">IFIP Networking 2010</span><br />
+				[<a href="javascript:$('#abs_ifip2010').toggle()">abstract</a>] [<a href="papers/10-ifip.pdf">pdf</a>]<!-- [<a href="#proj_vanet">project description</a>] -->
+				<div class="paper_abstract" id="abs_ifip2010">
+					Safety applications designed for Vehicular Ad Hoc Networks (VANETs) can be compromised by participating vehicles transmitting false or inaccurate information. Design of mechanisms that detect such misbehaving nodes is an important problem in VANETs. In this paper, we investigate the use of correlated information, called "secondary alerts", generated in response to another alert, called as the "primary alert" to verify the truth or falsity of the primary alert received by a vehicle. We first propose a framework to model how such correlated secondary information observed from more than one source can be integrated to generate a "degree of belief" for the primary alert. We then show an instantiation of the model proposed for the specific case of Post-Crash Notification as the primary alert and Slow/Stopped Vehicle Advisory as the secondary alerts. Finally, we present the design and evaluation of a misbehavior detection scheme (MDS) for PCN application using such correlated information to illustrate that such information can be used efficiently for MDS design.
+				</div>
+				</li>
+				<li class="paper">
+				<span class="paper_title">Unsupervised and supervised classification of hyperspectral image data using projection pursuit and Markov random field segmentation</span><br />
+				<span class="paper_authors">Anjan Sarkar, Ashish Vulimiri, Suman Paul, Md. Jawaid Iqbal, Avishek Banerjee, Rahul Chatterjee, Shibendu S. Ray</span><br />
+				<span class="paper_location">International Journal of Remote Sensing, Vol. 33 Issue 18, 2012</span><br />
+				[<a href="javascript:$('#abs_ijrs2012').toggle()">abstract</a>] [<a href="http://dx.doi.org/10.1080/01431161.2012.670959">link</a>]<!-- [<a href="#proj_hyperspec">project description</a>] -->
+				<div class="paper_abstract" id="abs_ijrs2012">
+					This work presents a classification technique for hyperspectral image analysis when concurrent ground-truth is unavailable and available. The method adapts a principal component analysis based projection pursuit (PP) procedure with an entropy index to reduce the dimensionality followed by the Markov Random Field (MRF) model based segmentation. An ordinal optimization approach to PP determines a set of good enough projections with high probability, the best among which is chosen with the help of MRF model based segmentation. When ground-truth is absent, the segmented output obtained is labeled with the desired number of classes so that it resembles the natural scene closely. When the landcover classes are in detailed level, some special reectance characteristics based on the classes of the study area in question are determined. These are later incorporated in MRF model based segmentation stage while minimizing the energy function in the image space. Segments are evaluated with training samples so as to yield a classified image with respect to the type of ground-truth data. Two illustrations are presented with (i) EO-1 Hyperion sensor image with concurrent groundtruth at detailed level classes and (ii) AVIRIS-92AV3C image with concurrent groundtruth - for supervised cases. Comparison of classification accuracies and computational times of some nonparametric approaches with that of the proposed methodology are provided for the illustrations. Experimental results demonstrate that the method provides high classification accuracy and is computationally faster compared to other methods.
+				</div>
+				</li>
+				<li class="paper">
+				<span class="paper_title">Unsupervised hyperspectral image analysis with projection pursuit and MRF segmentation approach</span><br />
+				<span class="paper_authors">Anjan Sarkar, Ashish Vulimiri, Shantanu Bose, Suman Paul, Shibendu S Ray</span><br />
+				<span class="paper_location">2008 International Conference on Artificial Intelligence and Pattern Recognition (AIPR-08), pp. 120-127</span><br />
+				[<a href="javascript:$('#abs_aipr08').toggle()">abstract</a>] [<a href="papers/08-aipr.pdf">pdf</a>]<!-- [<a href="#proj_hyperspec">project description</a>] -->
+				<div class="paper_abstract" id="abs_aipr08">
+					This work deals with hyperspectral image analysis in the absence of ground-truth. The method adopts a projection pursuit (PP) procedure with entropy index to reduce the dimensionality followed by Markov Random Field (MRF) model based segmentation. Ordinal optimization approach to PP determines a set of "good enough projections" with high probability the best among which is chosen with the help of MRF model based segmentation. The segmented output so obtained is labeled with desired number of landcover classes in the absence of ground-truth. While comparing with original hyperspectral image the methodology outperforms principal component analysis with respect to class separation as exhibited in the illustration of an archive EO-1 hyperspectral image. The technique is not computationally intensive as is usually the case in hyperspectral image analysis. When training samples are available, the segmented regions yield a classified image with any cluster validation technique.
+				</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="sixteen columns noscript-sec-head">
+			Contact
+		</div>
+		<div class="sixteen columns tab-content active" id="tab-contact">
+			<div class="row">
+				<div class="twelve columns alpha">
+					3107 #5 Siebel Center<br/>
+					201 N Goodwin Ave M/C 258<br/>
+					Urbana IL 61801<br/><br/>
+					<font class="pop-color">vulimir1@illi</font>TURNIP<font class="pop-color">nois.edu</font> minus the root vegetable
+				</div>
+				<div class="four columns omega">
+					<img src="images/contact-qr.png" style="float:right;" />
+					<!-- <span style="display: inline-block; width: 161px;">
+						<center>phone contact</center>
+					</span> -->
+				</div>
+			</div>
+		</div>
+	</div><!-- container -->
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#navbar").show();
+			$(".noscript-sec-head").hide();
+			$("ul.tabs li").click(function() {
+				$("ul.tabs li").removeClass("current");
+				$(".tab-content").removeClass("active");
+
+				$(this).addClass("current");
+				var tabid = $(this).attr('data-tab');
+				$("#" + tabid).addClass("active");
+			});
+			$("#link-pubs").trigger("click");
+		});
+	</script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
