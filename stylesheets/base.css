@@ -353,7 +353,7 @@ li.paper
 
 .paper_location
 {
-	font-style: italic;
+	/*font-style: italic;*/
 }
 
 .paper_abstract
