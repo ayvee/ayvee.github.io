@@ -87,12 +87,13 @@
 		<div class="sixteen columns tab-content active" id="tab-pubs">
 			<ul>
 				<li class="paper">
-				<span class="paper_title">Analytics on colossal time-series data with Summary Store</span><br />
+				<span class="paper_title">Low-latency analytics on colossal data streams with SummaryStore</span><br />
 				<span class="paper_authors">Nitin Agrawal, Ashish Vulimiri</span><br />
 				<span class="paper_location">SOSP 2017</span><br />
-                <!--[<a href="javascript:$('#abs_sosp2017').toggle()">abstract</a>] [<a href="papers/17-sosp.pdf">pdf</a>]
+                [<a href="javascript:$('#abs_sosp2017').toggle()">abstract</a>] [<a href="papers/17-sosp.pdf">pdf</a>
 				<div class="paper_abstract" id="abs_sosp2017">
-                </div>-->
+                    SummaryStore is an approximate time-series store, designed for analytics, capable of storing large volumes of time-series data (~1 petabyte) on a single node; it preserves high degrees of query accuracy and enables near real-time querying at unprecedented cost savings. SummaryStore contributes time-decayed summaries, a novel abstraction for summarizing data streams, along with an ingest algorithm to continually merge the summaries for efficient range queries; in conjunction, it returns reliable error estimates alongside the approximate answers, supporting a range of machine learning and analytical workloads. We successfully evaluated SummaryStore using real-world applications for forecasting, outlier detection, and Internet traffic monitoring; it can summarize aggressively with low median errors, 0.1 to 10%, for different workloads. Under range-query microbenchmarks, it stored 1PB synthetic stream data (1024 x 1TB streams), on a single node, using roughly 10 TB (100x compaction) with 95%-ile error below 5% and median cold-cache query latency of 1.3s (worst case latency under 70s).
+                </div>
 				</li>
 				<li class="paper">
 				<span class="paper_title">Global analytics in the face of bandwidth and regulatory constraints</span><br />
