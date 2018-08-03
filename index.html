@@ -114,15 +114,6 @@
 				</div>
 				</li>
 				<li class="paper">
-				<span class="paper_title">WANalytics: Geo-distributed analytics for a data-intensive world</span><br />
-				<span class="paper_authors">Ashish Vulimiri, Carlo Curino, Brighten Godfrey, Thomas Jungblut, Konstantinos Karanasos, Jitu Padhye, George Varghese</span><br />
-				<span class="paper_location">SIGMOD 2015 demo</span><br />
-				[<a href="javascript:$('#abs_sigmod2015').toggle()">abstract</a>]
-				<div class="paper_abstract" id="abs_sigmod2015">
-					Many large organizations collect massive volumes of data each day in a geographically distributed fashion, at data centers around the globe.  Despite their geographically diverse origin the data must be processed and analyzed as a whole to extract insight.  We call the problem of supporting large-scale geo-distributed analytics <em>Wide-Area Big Data (WABD)</em>.  To the best of our knowledge, WABD is currently addressed by copying all the data to a central data center where the analytics are run.  This approach consumes expensive cross-data center bandwidth and is incompatible with data sovereignty restrictions that are starting to take shape.  We instead propose WANalytics, a system that solves the WABD problem by orchestrating distributed query execution and adjusting data replication across data centers in order to minimize bandwidth usage, while respecting sovereignty requirements.  WANalytics achieves an up to 360x reduction in data transfer cost when compared to the centralized approach on both real Microsoft production workloads and standard synthetic benchmarks, including TPC-CH and Berkeley Big-Data.  In this demonstration, attendees will interact with a live geo-scale multi-data center deployment of \name, allowing them to experience the data transfer reduction our system achieves, and to explore how it dynamically adapts execution strategy in response to changes in the workload and environment.
-				</div>
-				</li>
-				<li class="paper">
 				<span class="paper_title">WANalytics: Analytics for a geo-distributed data-intensive world</span><br />
 				<span class="paper_authors">Ashish Vulimiri, Carlo Curino, Brighten Godfrey, Konstantinos Karanasos, George Varghese</span><br />
 				<span class="paper_location">CIDR 2015</span><br />
@@ -131,6 +122,15 @@
 					<p>Large organizations today operate data centers around the globe where massive amounts of data are produced and consumed by local users. Despite their geographically diverse origin, such data must be analyzed/mined as a whole. We call the problem of supporting rich DAGs of computation across geographically distributed data <em>Wide-Area Big-Data (WABD)</em>.  To the best of our knowledge, WABD is not supported by currently deployed systems nor sufficiently studied in literature; it is addressed today by continuously copying raw data to a central location for analysis.  We observe from production workloads that WABD is important for large organizations, and that centralized solutions incur <em>substantial cross-data center network costs</em>.  We argue that these trends will only worsen as the gap between data volumes and transoceanic bandwidth widens.  Further, emerging concerns over data sovereignty and privacy may trigger government regulations that can threaten the very viability of centralized solutions.</p>
 
 					<p>To address WABD we propose WANalytics, a system that pushes computation to edge data centers, automatically optimizing workflow execution plans and replicating data when needed.  Our Hadoop-based prototype delivers 257x reduction in WAN bandwidth on a production workload from Microsoft. We round out our evaluation by also demonstrating substantial gains for three standard benchmarks: TPC-CH, Berkeley Big Data, and BigBench.</p>
+				</div>
+				</li>
+				<li class="paper">
+				<span class="paper_title">WANalytics: Geo-distributed analytics for a data-intensive world</span><br />
+				<span class="paper_authors">Ashish Vulimiri, Carlo Curino, Brighten Godfrey, Thomas Jungblut, Konstantinos Karanasos, Jitu Padhye, George Varghese</span><br />
+				<span class="paper_location">SIGMOD 2015 demo</span><br />
+				[<a href="javascript:$('#abs_sigmod2015').toggle()">abstract</a>]
+				<div class="paper_abstract" id="abs_sigmod2015">
+					Many large organizations collect massive volumes of data each day in a geographically distributed fashion, at data centers around the globe.  Despite their geographically diverse origin the data must be processed and analyzed as a whole to extract insight.  We call the problem of supporting large-scale geo-distributed analytics <em>Wide-Area Big Data (WABD)</em>.  To the best of our knowledge, WABD is currently addressed by copying all the data to a central data center where the analytics are run.  This approach consumes expensive cross-data center bandwidth and is incompatible with data sovereignty restrictions that are starting to take shape.  We instead propose WANalytics, a system that solves the WABD problem by orchestrating distributed query execution and adjusting data replication across data centers in order to minimize bandwidth usage, while respecting sovereignty requirements.  WANalytics achieves an up to 360x reduction in data transfer cost when compared to the centralized approach on both real Microsoft production workloads and standard synthetic benchmarks, including TPC-CH and Berkeley Big-Data.  In this demonstration, attendees will interact with a live geo-scale multi-data center deployment of \name, allowing them to experience the data transfer reduction our system achieves, and to explore how it dynamically adapts execution strategy in response to changes in the workload and environment.
 				</div>
 				</li>
 				<li class="paper">
